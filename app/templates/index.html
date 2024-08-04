@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Pokemon Card Image Detector</title>
+</head>
+<body>
+
+  <!-- Enhanced Title with Styling -->
+  <div class="page_heading">Pokemon Card Image Detector</div>
+
+  <!-- Presentation Text -->
+  <div class="presentation_text">
+    <h2>Project Introduction</h2>
+    <p>
+      Welcome to our Pokémon card detection demo. This project is specifically designed to recognize Pokémon cards from the Base Set. Although it is trained primarily on French Base Set 2 cards, it can effectively detect all Base Set cards, even those in English.
+    </p>
+    <p>
+      Utilizing advanced machine learning algorithms, our tool extracts essential details from each card, including name, number, set, and year. We hope this demo showcases the potential of image recognition technologies in the world of collectible card games.
+    </p>
+    <img src="{{ url_for('static', filename='name.png') }}" alt="Ammar Kheder Signature" class="signature">
+  </div>
+
+  <!-- GIF Container -->
+  <div class="gif_container">
+    <img src="{{ url_for('static', filename='v.gif') }}" alt="Animated GIF" class="my_gif">
+  </div>
+
+  <div class="upload_form">
+    <input type="file" id="file" class="file_class">
+    <button onclick="get_card_details()">Submit</button>
+  </div>
+
+  <div id="details"></div>
+
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

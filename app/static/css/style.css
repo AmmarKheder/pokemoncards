@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #050A30;
+  font-family: "Roboto", sans-serif;
+}
+
+.page_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Garder le titre centré */
+  margin-top: 2rem;
+  font-size: 1.875rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.upload_form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligner à gauche */
+  margin-top: 5rem; /* Ajuster la marge si nécessaire */
+  margin-left: 2rem; /* Ajouter une marge à gauche si nécessaire */
+  gap: 1rem; /* Assurer un espace constant entre les éléments */
+}
+
+label {
+  font-size: 1.5rem; /* Taille de police légèrement plus petite */
+  color: #ffffff;
+  font-weight: 700;
+}
+
+input[type="file"] {
+  padding: 0;
+  outline: none;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 18rem; /* Largeur suffisante pour voir le texte */
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  height: 2.5rem; /* Uniformiser la hauteur */
+}
+
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 5px 15px;
+  height: 100%; /* Assurer que le bouton occupe toute la hauteur */
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  width: 120px; /* Largeur du bouton */
+  color: #000; /* Couleur du texte visible */
+
+  @supports (-moz-appearance: none) {
+    color: var(--primary-color);
+  }
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
+
+  &:active {
+    background-color: #e5e7eb;
+  }
+}
+
+.file_class {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 4px; /* Assurer la même apparence */
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  height: 2.5rem; /* Assurer la même hauteur que le bouton d'upload */
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  font-size: 1rem; /* Taille de police ajustée */
+  color: #000;
+  font-weight: 700;
+  line-height: normal; /* Pour aligner le texte verticalement */
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(2, 10rem); /* Réduire le nombre et la taille des colonnes */
+  gap: 0.75rem; /* Espacement entre les colonnes */
+  margin-top: 5rem;
+  margin-left: 2rem;
+}
+
+.block {
+  color: #fff;
+  text-align: left;
+  font-size: 1rem; /* Réduction de la taille du texte */
+}
+
+.box_style {
+  border: solid 0.125rem #fff;
+  color: #fff;
+  font-size: 1rem; /* Taille de police plus petite */
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.image_container {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  left: 20rem; /* Augmenter la valeur pour déplacer l'image plus à droite */
+  top: -18rem; /* Diminuer la valeur pour déplacer l'image plus en haut */
+  width: 15rem; /* Taille de l'image */
+  height: 20rem;
+}
+.presentation_text {
+  position: fixed; /* Fixe le bloc de texte à un emplacement précis */
+  right: 480px; /* Espace entre le texte et le GIF, ajusté en fonction de la largeur du GIF */
+  top: 220px; /* Aligne verticalement avec le GIF */
+  width: 400px; /* Largeur du bloc de texte */
+  color: #ffffff; /* Texte en blanc */
+  font-size: 16px; /* Taille de la police */
+  line-height: 1.5; /* Hauteur de ligne pour améliorer la lisibilité */
+  z-index: 9; /* Assure que le texte reste en dessous du GIF */
+}
+.page_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  position: relative; /* For positioning the underline */
+  padding-bottom: 10px; /* Space for the underline */
+  text-transform: uppercase; /* Makes the text uppercase for emphasis */
+}
+
+.page_heading::after {
+  content: ''; /* Pseudo-element for underline */
+  position: absolute;
+  left: 50%; /* Centers the underline */
+  bottom: 0; /* Positions it at the bottom of the element */
+  transform: translateX(-50%); /* Centers it horizontally */
+  width: 60%; /* Width of the underline */
+  height: 3px; /* Thickness of the underline */
+  background-color: #ffffff; /* Color of the underline */
+  border-radius: 5px; /* Rounded edges for the underline */
+}
+
+.my_gif {
+  position: fixed; /* Fixe l'image à un emplacement précis sur la page */
+  right: 50px; /* Décale l'image encore plus à droite au-delà du bord */
+  top: 220px; /* Ajoute un espace entre le haut de la page et l'image */
+  width: 400px; /* Ajuste la largeur selon tes besoins */
+  height: auto; /* Conserve le rapport d'aspect */
+  display: block; /* Assure que l'image est un bloc pour des marges */
+  border: 5px solid white; /* Ajoute un bord blanc autour de l'image */
+  border-radius: 8px; /* Coins arrondis pour un effet esthétique */
+  border-radius: 8px; /* Coins arrondis pour un effet esthétique */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
+  z-index: 10; /* Assure que l'image est au-dessus d'autres contenus */
+}
+.signature {
+  width: 200px; /* Taille de l'image de la signature */
+  height: auto; /* Conserve le rapport d'aspect */
+  position: absolute; /* Positionne l'image par rapport au texte */
+  bottom: -100px; /* Descend l'image en dessous du conteneur */
+  right: 0; /* Aligne à droite du conteneur */
+  margin: 5px; /* Espace autour de l'image */
+}
