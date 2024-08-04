@@ -1,6 +1,7 @@
 # Pokémon Card Detection Demo
 
 Welcome to the Pokémon Card Detection Demo! This project showcases the capabilities of our machine learning model to recognize and extract information from Pokémon cards, specifically focusing on the Base Set. 
+![Demo of the Application](static/demo.png)
 
 ## Project Overview
 
