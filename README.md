@@ -62,5 +62,6 @@ flask run
 6. **Access the Application:**
 
 Open your web browser and navigate to http://localhost:5000 to view the demo.
+![Demo of the Application](app/static/demo1.gif)
 
 
