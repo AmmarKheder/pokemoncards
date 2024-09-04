@@ -41,8 +41,8 @@ To get started with the project, follow these steps:
 2. **Create a Virtual Environment:**
    
 
-  python3 -m venv env
-  source env/bin/activate  # On Windows, use `env\Scripts\activate`
+ 1 python3 -m venv env 
+ 2 source env/bin/activate  # On Windows, use `env\Scripts\activate`
   
 3. **Install Dependencies:**
 
